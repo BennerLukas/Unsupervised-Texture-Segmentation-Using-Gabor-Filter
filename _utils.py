@@ -207,7 +207,7 @@ def createGrid(listOfBrodatzInts, outName, howManyPerRow):
         # 128x128 crops, in order to generate a 512x512 image
         cropTexture(256, 256, 384, 384, brodatzCropInput, brodatzCropOutput)
         listOfRowOutputs.append(brodatzCropOutput)
-    subOuts = [listOfRowOutputs[x:x + howManyPerRow] for x in xrange(0,len(listOfRowOutputs), howManyPerRow)]
+    subOuts = [listOfRowOutputs[x:x + howManyPerRow] for x in range(0,len(listOfRowOutputs), howManyPerRow)]
     dests = []
     for i in range(len(subOuts)):
         dest = brodatz + "cropRow" + str(i) + ".png"
@@ -227,7 +227,7 @@ def createGridWithCircle(listOfBrodatzInts, circleInt, outName):
         # 128x128 crops, in order to generate a 256x256 image
         cropTexture(256, 256, 384, 384, brodatzCropInput, brodatzCropOutput)
         listOfRowOutputs.append(brodatzCropOutput)
-    subOuts = [listOfRowOutputs[x:x + 2] for x in xrange(0, len(listOfRowOutputs), 2)]
+    subOuts = [listOfRowOutputs[x:x + 2] for x in range(0, len(listOfRowOutputs), 2)]
     dests = []
     for i in range(len(subOuts)):
         dest = brodatz + "cropRow" + str(i) + ".png"
